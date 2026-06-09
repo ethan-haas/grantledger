@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --z-dropdown: 10;
+    --z-sticky: 20;
+    --z-header: 30;
+    --z-sidebar-overlay: 40;
+    --z-sidebar: 50;
+    --z-modal-overlay: 60;
+    --z-modal: 70;
+    --z-toast: 80;
+    --z-command-palette: 100;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-slate-900 antialiased dark:bg-slate-900 dark:text-slate-100;
+  }
+
+  /* Prevent iOS zoom on form inputs */
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+
+  @media (min-width: 768px) {
+    input,
+    select,
+    textarea {
+      font-size: inherit;
+    }
+  }
+
+  ::selection {
+    @apply bg-primary-100 text-primary-900 dark:bg-primary-900 dark:text-primary-100;
+  }
+}
+
+@layer components {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary-600 via-accent-500 to-violet-600 bg-clip-text text-transparent;
+  }
+
+  .bg-gradient-subtle {
+    background: linear-gradient(135deg, #f8fafc 0%, #eff6ff 50%, #f5f3ff 100%);
+  }
+
+  .dark .bg-gradient-subtle {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #1e1b4b 100%);
+  }
+
+  .bg-gradient-hero {
+    background: linear-gradient(135deg, #ffffff 0%, #eff6ff 40%, #eef2ff 70%, #f5f3ff 100%);
+  }
+
+  .dark .bg-gradient-hero {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 40%, #312e81 70%, #1e1b4b 100%);
+  }
+
+  .bg-mesh {
+    background-color: #ffffff;
+    background-image:
+      radial-gradient(at 20% 20%, rgb(219 234 254 / 0.4) 0, transparent 50%),
+      radial-gradient(at 80% 10%, rgb(224 231 255 / 0.3) 0, transparent 50%),
+      radial-gradient(at 50% 80%, rgb(237 233 254 / 0.3) 0, transparent 50%);
+  }
+
+  .dark .bg-mesh {
+    background-color: #0f172a;
+    background-image:
+      radial-gradient(at 20% 20%, rgb(30 58 138 / 0.3) 0, transparent 50%),
+      radial-gradient(at 80% 10%, rgb(49 46 129 / 0.2) 0, transparent 50%),
+      radial-gradient(at 50% 80%, rgb(30 27 75 / 0.2) 0, transparent 50%);
+  }
+
+  .bg-grid {
+    background-image: radial-gradient(circle, rgb(148 163 184 / 0.15) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  .dark .bg-grid {
+    background-image: radial-gradient(circle, rgb(71 85 105 / 0.2) 1px, transparent 1px);
+  }
+
+  .glass {
+    @apply bg-white/80 backdrop-blur-lg dark:bg-slate-900/80;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display), var(--font-inter), system-ui, sans-serif;
+  }
+}
+
+/* Scrollbar styling */
+@media (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgb(203 213 225 / 0.5);
+    border-radius: 4px;
+  }
+
+  .dark ::-webkit-scrollbar-thumb {
+    background: rgb(71 85 105 / 0.5);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(148 163 184 / 0.6);
+  }
+
+  .dark ::-webkit-scrollbar-thumb:hover {
+    background: rgb(100 116 139 / 0.6);
+  }
+}
+
+/* Safe area for notched devices */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

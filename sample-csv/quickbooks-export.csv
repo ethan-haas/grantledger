@@ -1,0 +1,16 @@
+Date,Payee,Memo,Amount,Account,Class
+2025-05-01,ADP Payroll Services,May payroll - Program Director,7500.00,Payroll,Grant-CHI
+2025-05-01,ADP Payroll Services,May payroll - Health Coordinator,5200.00,Payroll,Grant-CHI
+2025-05-01,ADP Payroll Services,May payroll - Data Analyst (50% FTE),3100.00,Payroll,Grant-CHI
+2025-05-05,BlueCross BlueShield,May health insurance premiums,3800.00,Benefits,Grant-CHI
+2025-05-08,Staples,Office supplies - toner cartridges and paper,285.75,Office Supplies,Grant-CHI
+2025-05-10,Amazon Business,Portable blood pressure monitors x5,625.00,Medical Supplies,Grant-CHI
+2025-05-12,United Airlines,Flight to CDC training - Atlanta,445.00,Travel,Grant-CHI
+2025-05-12,Hyatt Regency,Hotel 2 nights - CDC training,480.00,Travel,Grant-CHI
+2025-05-14,Lyft Business,Ground transport to/from CDC training,67.50,Travel,Grant-CHI
+2025-05-15,Garcia Consulting LLC,Community needs assessment - Phase 2,15000.00,Professional Services,Grant-CHI
+2025-05-18,The Print Shop,Health education flyers - 2000 copies,850.00,Printing,Grant-CHI
+2025-05-20,Zoom Video Communications,Monthly telehealth subscription,150.00,Software,Grant-CHI
+2025-05-22,FedEx,Ship supplies to 3 field clinics,142.30,Shipping,Grant-CHI
+2025-05-25,Internal Allocation,May indirect costs @ 15% de minimis,5500.00,Indirect,Grant-CHI
+2025-05-28,Costco Business,Bottled water and snacks for community health fair,312.00,Event Supplies,Grant-CHI
