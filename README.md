@@ -32,6 +32,3 @@ cp .env.local.example .env.local    # add your own keys
 npm run dev
 ```
 Database migrations live in `supabase/`. Sample input data is in `sample-csv/`.
-
-> **Security:** `.env*` is gitignored — never commit real keys. Rotate any keys before making
-> the repository public.
